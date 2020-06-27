@@ -1,6 +1,6 @@
 # asdf-mockery
 
-[![Build Status](https://travis-ci.org/Luizm/asdf-shellcheck.svg?branch=master)](https://travis-ci.org/luizm/asdf-shellcheck)
+[![Build Status](https://travis-ci.org/tolbier/asdf-mockery.svg?branch=master)](https://travis-ci.org/tolbier/asdf-mockery)
 
 [mockery](https://github.com/vektra/mockery) plugin for the [asdf](https://github.com/asdf-vm/asdf) version manager.
 
