@@ -21,7 +21,7 @@ _get_download_url() {
 	local -r version="$1"
 	local -r platform="$2"
 
-	echo "https://github.com/vektra/mockery/releases/download/v${version}/mockery-v${version}.${platform}.x86_64.tar.xz"
+	echo "https://github.com/vektra/mockery/releases/download/v${version}/mockery-v${version}.${platform}.x86_64.tar.gz"
 }
 
 install() {
@@ -37,7 +37,7 @@ install() {
 	mkdir -p "$bin_install_path"
 	echo "Downloading mockery from $download_url"
 	curl -Ls "$download_url" -o "$tar_install_path"
-	tar -xf "$tar_install_path"
+	tar -xzf "$tar_install_path"
 	cp "mockery-v$version/mockery" "$bin_path"
 	rm -rf "mockery-v$version"
 	chmod +x "$bin_path"
