@@ -38,8 +38,7 @@ install() {
 	echo "Downloading mockery from $download_url"
 	curl -Ls "$download_url" -o "$tar_install_path"
 	tar -xzf "$tar_install_path"
-	cp "mockery-v$version/mockery" "$bin_path"
-	rm -rf "mockery-v$version"
+	cp "mockery" "$bin_path"
 	chmod +x "$bin_path"
 }
 
