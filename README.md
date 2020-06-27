@@ -9,7 +9,7 @@ For more informations about the [asdf usage](https://asdf-vm.com/#/core-commands
 ## Add plugin
 
 ```
-asdf plugin-add mockery
+asdf plugin add mockery https://github.com/tolbier/asdf-mockery.git
 ```
 
 ## Install 
