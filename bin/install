@@ -30,6 +30,7 @@ install() {
 	local -r install_path=$3
 	local -r tar_install_path="$install_path/mockery-v$version.tgz"
 	local -r bin_install_path="$install_path/bin"
+	local -r tmp_install_path="mockery-v$version"
 	local -r platform="$(_get_arch)"
 	local -r download_url="$(_get_download_url "$version" "$platform")"
 	local -r bin_path="$bin_install_path/mockery"
@@ -37,8 +38,10 @@ install() {
 	mkdir -p "$bin_install_path"
 	echo "Downloading mockery from $download_url"
 	curl -Ls "$download_url" -o "$tar_install_path"
-	tar -xzf "$tar_install_path"
-	cp "mockery" "$bin_path"
+	mkdir "$tmp_install_path"
+	tar -xzf "$tar_install_path" -C "$tmp_install_path"
+	cp "$tmp_install_path/mockery" "$bin_path"
+	rm -rf "$tmp_install_path"
 	chmod +x "$bin_path"
 }
 
